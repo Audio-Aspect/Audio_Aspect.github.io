@@ -1,0 +1,145 @@
+/*
+.bricolage-grotesque-<uniquifier> {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+    .permanent-marker-regular {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*/
+
+/* set our defaults and our constants. We need to use the ROOT selector*/
+
+* {
+  --cardColors: rgba(0, 0, 0, 0.6);
+  --textColor: #bbb8b2ff;
+  --dark-amaranth: #6e0d25ff;
+  --accents: #157145ff;
+  --golden-earth: #895b1eff;
+  color: white;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+/*selecting just the body*/
+body {
+  background-color: var(--turf-green);
+  background-image: url("./assets/css-pattern-by-magicpattern.png");
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-bottom: 32px;
+  font-family: "Permanent Marker", cursive;
+  color: white;
+  font-size: 32px;
+  font-weight: 900;
+  text-shadow:
+    0 5px 5px var(--cardColors),
+    0 1px 3px var(--cardColors);
+}
+
+header::first-letter {
+  font-size: 65px;
+  color: teal;
+}
+
+.title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 72px;
+  margin-bottom: 32px;
+  line-height: 84px;
+  text-shadow:
+    0 5px 5px var(--cardColors),
+    0 1px 3px var(--cardColors);
+}
+
+.title::first-letter {
+  color: teal;
+  initial-letter: 2;
+  padding: 1.5px;
+}
+
+h2 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-bottom: 32px;
+  font-family: "Permanent Marker", cursive;
+  color: teal;
+  font-size: 42px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow:
+    0 5px 5px var(--cardColors),
+    0 1px 3px var(--cardColors);
+}
+
+.cards div {
+  background-color: var(--cardColors);
+  padding: 16px;
+  border: 0.5px solid var(--accents);
+  border-radius: 8px;
+  width: 75%;
+  /* shorthand for centering items is margin: 0 auto*/
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+
+  transition: all 500ms;
+}
+
+.cards div:hover {
+  /* box-shadow: 8px 8px teal; */
+
+  border-right-color: teal;
+  border-right-width: 16px;
+  border-style: solid;
+  width: 500ms;
+}
+
+.cards div > img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+h3 {
+  font-family: "Permanent Marker", cursive;
+  color: teal;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow:
+    0 5px 5px var(--cardColors),
+    0 1px 3px var(--cardColors);
+}
+
+.education > ul {
+  background-color: var(--cardColors);
+  border-radius: 8px;
+  font-size: 24px;
+  list-style-image: url(./assets/arrows_more_up_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg);
+}
+
+.education > ul li {
+  padding: 16px;
+}
+
+.year {
+  color: var(--accents);
+}
